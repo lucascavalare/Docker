@@ -1,9 +1,9 @@
 FROM ubuntu:18.04
 
 RUN apt-get update && apt-get -y install \
-    apache2.4 \
-    php7 \
-    php7-mysql \
+    apache2 \
+    php5 \
+    php5-mysql \
     supervisor \
     wget
     
