@@ -2,8 +2,8 @@ FROM ubuntu:18.04
 
 RUN apt-get update && apt-get -y install \
     apache2 \
-    php5 \
-    php5-mysql \
+    php5.6 \
+    php5.6-mysql \
     supervisor \
     wget
     
