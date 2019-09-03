@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata \
+RUN apt-get update && apt-get upgrade && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata \
     && rm -rf /var/lib/apt/lists/* \
     apache2 \
     php5 \
@@ -12,7 +12,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 RUN echo 'mysql-server mysql-server/root_password password root' | debconf-set-selections && \
     echo 'mysql-server mysql-server/root_password_again password root' | debconf-set-selections
     
-RUN apt-get install -y mysql-server-5.7
+RUN apt-get install -y mysql-server
 
 RUN wget http://wordpress.org/latest.tar.gz && \
     tar xzvf latest.tar.gz && \
