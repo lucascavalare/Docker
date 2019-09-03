@@ -12,7 +12,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 RUN echo 'mysql-server mysql-server/root_password password root' | debconf-set-selections && \
     echo 'mysql-server mysql-server/root_password_again password root' | debconf-set-selections
     
-RUN apt-get install -qqy mysql-server
+RUN apt-get install -y mysql-server
 
 RUN wget http://wordpress.org/latest.tar.gz && \
     tar xzvf latest.tar.gz && \
