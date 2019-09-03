@@ -8,10 +8,8 @@ RUN apt-get update && apt-get -y install \
     wget
     
     
-RUN echo 'mysql-server mysql-server/root_password password root' | \
-    debconf-set-selections && \
-    echo 'mysql-server mysql-server/root_password_again password root | \ 
-    debconf-set-selections
+RUN echo 'mysql-server mysql-server/root_password password root' | debconf-set-selections && \
+    echo 'mysql-server mysql-server/root_password_again password root | debconf-set-selections
     
 RUN apt-get install -qqy mysql-server
 
