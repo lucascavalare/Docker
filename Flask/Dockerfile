@@ -1,8 +1,8 @@
 FROM ubuntu:18.04
 
-RUN apt update && apt install -y python && apt install python-pip && apt clean all
+RUN apt-get update && apt-get install -y python3 && apt-get install -y python3-pip && apt clean all
 
-RUN pip install flask
+RUN pip3 install flask
 
 ADD hello_world.py /tmp/hello_world.py
 
