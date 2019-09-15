@@ -1,3 +1,5 @@
 FROM ubuntu:18.04 AS build-env
 
-ENTRYPOINT ["/bin/echo" , "Hi Docker!"]
+#ENTRYPOINT [] 
+
+CMD ["/bin/echo" , "Hi Docker!"]
