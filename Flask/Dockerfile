@@ -8,5 +8,5 @@ ADD hello_world.py /tmp/hello_world.py
 
 EXPOSE 5000
 
-CMD ["python","/tmp/hello_world.py"]
+CMD ["python3","/tmp/hello_world.py"]
 
