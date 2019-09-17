@@ -1,10 +1,8 @@
-FROM ubuntu:18.04
-
-RUN apt-get update && apt-get install -y python3 && apt-get install -y python3-pip && apt clean all
+FROM python:3.7.4
 
 RUN pip3 install flask
 
-ADD hello_world.py /tmp/hello_world.py
+COPY hello_world.py /tmp/hello_world.py
 
 EXPOSE 5000
 
